@@ -67,57 +67,6 @@ test_transform = transforms.Compose([
     transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
 ])
 
-import torch
-
-# ----------------------------
-# 1. Activation Functions (Tensor Version)
-# ----------------------------
-
-def sigmoid(z):
-    return 1 / (1 + torch.exp(-z))
-
-def ReLU(z):
-    return torch.maximum(z, torch.tensor(0.0))
-
-def softmax(z):
-    # Numerically stable implementation
-    z_exp = torch.exp(z - torch.max(z, dim=1, keepdim=True)[0])
-    return z_exp / torch.sum(z_exp, dim=1, keepdim=True)
-
-# ----------------------------
-# 2. Derivatives (Autograd-Compatible)
-# ----------------------------
-
-def deriv_ReLU(z):
-    """Gradient for ReLU activation"""
-    return (z > 0).float()
-
-def deriv_sigmoid(z):
-    """Gradient for sigmoid activation"""
-    return z * (1 - z)
-
-# ----------------------------
-# 3. Custom Loss Function
-# ----------------------------
-
-def cross_entropy_loss(Y_hat, Y):
-    """
-    Args:
-        Y_hat: Predicted probabilities (batch_size, 200)
-        Y: True class indices (batch_size,)
-    """
-    # Convert labels to one-hot encoding
-    Y_onehot = torch.nn.functional.one_hot(Y, num_classes=200).float()
-    
-    # Clip predictions to avoid log(0)
-    Y_hat = torch.clamp(Y_hat, 1e-10, 1.0 - 1e-10)
-    
-    # Compute loss
-    loss = -torch.mean(Y_onehot * torch.log(Y_hat))
-    return loss
-
-
-
 
 # ----------------------------
 # 3. Model Setup
