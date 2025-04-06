@@ -102,11 +102,11 @@ def train_model():
     model = create_model().to(device)
     
     # Data Loaders
-    train_dataset = ImageFolder(root='data/train', transform=train_transform)
+    train_dataset = ImageFolder(root='../data/train', transform=train_transform)
     train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True, num_workers=4)
     
     # Test Loader
-    test_dataset = TestDataset(root_dir='data/test', transform=test_transform)
+    test_dataset = TestDataset(root_dir='../data/test', transform=test_transform)
     test_loader = DataLoader(test_dataset, batch_size=32, shuffle=False, num_workers=4)
     
     # Training Setup
@@ -115,7 +115,7 @@ def train_model():
     scheduler = optim.lr_scheduler.StepLR(optimizer, step_size=5, gamma=0.1)
     
     # Training Loop
-    for epoch in range(10):
+    for epoch in range(1):
         model.train()
         running_loss = 0.0
         
@@ -154,7 +154,7 @@ def generate_submission(model, test_loader, device):
             filenames.extend(names)
     
     # Create mapping
-    class_to_idx = ImageFolder(root='data/train').class_to_idx
+    class_to_idx = ImageFolder(root='../data/train').class_to_idx
     idx_to_class = {v: k for k, v in class_to_idx.items()}
     
     # Create DataFrame
@@ -174,7 +174,7 @@ def generate_submission(model, test_loader, device):
 if __name__ == "__main__":
     trained_model = train_model()
     test_loader = DataLoader(
-        TestDataset(root_dir='data/test', transform=test_transform),
+        TestDataset(root_dir='../data/test', transform=test_transform),
         batch_size=32, shuffle=False, num_workers=4
     )
     generate_submission(trained_model, test_loader, 
