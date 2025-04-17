@@ -31,6 +31,6 @@ We used the **Caltech-UCSD Birds-200-2011 (CUB-200)** dataset which includes:
 ## How to Run
 
 1. Clone the repository:
-  We have made a notebook for easy flow, you can run the notebook in train.py
+  We have made a notebook for easy flow, you can run the notebook in src/main.py
 
 
