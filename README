@@ -1,0 +1,36 @@
+# Bird Species Classification using Neural Networks
+
+This project aims to classify bird species using image and text data, integrating Neural Networks, Natural Language Processing (NLP) techniques, and traditional Machine Learning workflows. It was developed as part of a team submission for the AI/ML GC (General Championship) challenge at IIT Bombay.
+
+## Overview
+
+We built a multi-modal classification pipeline using:
+- **Image Processing** for visual features
+- **NLP-based features** from bird descriptions
+- A combined **Neural Network model** trained on the fused dataset
+
+The model predicts the correct **bird species** from a set of 200 categories using data derived from bird images and textual information.
+
+## Dataset
+
+We used the **Caltech-UCSD Birds-200-2011 (CUB-200)** dataset which includes:
+- 11,788 bird images
+- 200 bird species
+- Corresponding textual descriptions for each species
+
+## Technologies Used
+
+- Python (NumPy, Pandas, Matplotlib)
+- PyTorch / TensorFlow (Neural Network framework)
+- OpenCV & PIL (Image processing)
+- Scikit-learn (Evaluation metrics, preprocessing)
+- Git, GitHub (version control)
+
+---
+
+## How to Run
+
+1. Clone the repository:
+  We have made a notebook for easy flow, you can run the notebook in train.py
+
+
