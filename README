@@ -1,36 +1,48 @@
 # Bird Species Classification using Neural Networks
 
-This project aims to classify bird species using image and text data, integrating Neural Networks, Natural Language Processing (NLP) techniques, and traditional Machine Learning workflows. It was developed as part of a team submission for the AI/ML GC (General Championship) challenge at IIT Bombay.
+This project focuses on accurately classifying bird species by integrating both **image** and **textual** data using Neural Networks, Natural Language Processing (NLP), and traditional Machine Learning techniques.  
+It was developed as part of a team submission for the **AI/ML General Championship at IIT Bombay**.
 
-## Overview
+---
 
-We built a multi-modal classification pipeline using:
-- **Image Processing** for visual features
-- **NLP-based features** from bird descriptions
-- A combined **Neural Network model** trained on the fused dataset
+## Project Overview
 
-The model predicts the correct **bird species** from a set of 200 categories using data derived from bird images and textual information.
+We developed a **multi-modal classification system** combining:
+- **Image-based features** extracted through convolutional models
+- **Text-based features** using NLP on bird species descriptions
+- A **hybrid neural network** trained on the fused data from both sources
+
+The model predicts the correct **bird species (1 out of 200)** by leveraging visual cues and descriptive text.
+
+---
 
 ## Dataset
 
-We used the **Caltech-UCSD Birds-200-2011 (CUB-200)** dataset which includes:
-- 11,788 bird images
-- 200 bird species
-- Corresponding textual descriptions for each species
+We used the **Caltech-UCSD Birds-200-2011 (CUB-200)** dataset:
+- 11,788 high-quality bird images
+- 200 distinct bird species
+- Textual descriptions for each class
+
+---
 
 ## Technologies Used
 
-- Python (NumPy, Pandas, Matplotlib)
-- PyTorch / TensorFlow (Neural Network framework)
-- OpenCV & PIL (Image processing)
-- Scikit-learn (Evaluation metrics, preprocessing)
-- Git, GitHub (version control)
+- **Python** – Data processing and overall pipeline  
+- **PyTorch / TensorFlow** – Neural network modeling  
+- **OpenCV & PIL** – Image preprocessing and augmentation  
+- **Scikit-learn** – Evaluation metrics and ML utilities  
+- **NumPy, Pandas, Matplotlib** – Data handling and visualization  
+- **Git & GitHub** – Version control and collaboration
 
 ---
 
 ## How to Run
 
 1. Clone the repository:
+  1. Clone the repository:
   We have made a notebook for easy flow, you can run the notebook in src/main.py
+
+
+
 
 
