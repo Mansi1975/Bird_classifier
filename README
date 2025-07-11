@@ -3,8 +3,6 @@
 This project focuses on accurately classifying bird species by integrating both **image** and **textual** data using Neural Networks, Natural Language Processing (NLP), and traditional Machine Learning techniques.  
 It was developed as part of a team submission for the **AI/ML General Championship at IIT Bombay**.
 
----
-
 ## Project Overview
 
 We developed a **multi-modal classification system** combining:
@@ -14,7 +12,6 @@ We developed a **multi-modal classification system** combining:
 
 The model predicts the correct **bird species (1 out of 200)** by leveraging visual cues and descriptive text.
 
----
 
 ## Dataset
 
@@ -23,7 +20,6 @@ We used the **Caltech-UCSD Birds-200-2011 (CUB-200)** dataset:
 - 200 distinct bird species
 - Textual descriptions for each class
 
----
 
 ## Technologies Used
 
@@ -34,7 +30,6 @@ We used the **Caltech-UCSD Birds-200-2011 (CUB-200)** dataset:
 - **NumPy, Pandas, Matplotlib** – Data handling and visualization  
 - **Git & GitHub** – Version control and collaboration
 
----
 
 ## How to Run
 
