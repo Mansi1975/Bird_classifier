@@ -1,6 +1,7 @@
 # Bird Species Classification using Neural Networks
 
-This project focuses on accurately classifying bird species by integrating both **image** and **textual** data using Neural Networks, Natural Language Processing (NLP), and traditional Machine Learning techniques.  
+This project focuses on accurately classifying bird species by integrating both **image** and **textual** data using Neural Networks, Natural Language Processing (NLP), and traditional Machine Learning techniques.
+
 It was developed as part of a team submission for the **AI/ML General Championship at IIT Bombay**.
 
 ## Project Overview
@@ -12,7 +13,6 @@ We developed a **multi-modal classification system** combining:
 
 The model predicts the correct **bird species (1 out of 200)** by leveraging visual cues and descriptive text.
 
-
 ## Dataset
 
 We used the **Caltech-UCSD Birds-200-2011 (CUB-200)** dataset:
@@ -20,24 +20,82 @@ We used the **Caltech-UCSD Birds-200-2011 (CUB-200)** dataset:
 - 200 distinct bird species
 - Textual descriptions for each class
 
-
 ## Technologies Used
 
-- **Python** – Data processing and overall pipeline  
-- **PyTorch / TensorFlow** – Neural network modeling  
-- **OpenCV & PIL** – Image preprocessing and augmentation  
-- **Scikit-learn** – Evaluation metrics and ML utilities  
-- **NumPy, Pandas, Matplotlib** – Data handling and visualization  
+- **Python** – Data processing and overall pipeline
+- **PyTorch / TensorFlow** – Neural network modeling
+- **OpenCV & PIL** – Image preprocessing and augmentation
+- **Scikit-learn** – Evaluation metrics and ML utilities
+- **NumPy, Pandas, Matplotlib** – Data handling and visualization
 - **Git & GitHub** – Version control and collaboration
 
+## Getting Started
 
-## How to Run
+### Prerequisites
 
-1. Clone the repository:
-  1. Clone the repository:
-  We have made a notebook for easy flow, you can run the notebook in src/main.py
+Make sure you have Python 3.7+ installed on your system.
 
+### Installation
 
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Mansi1975/bird-species-classification.git
+   cd bird-species-classification
+   ```
 
+2. **Install required dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
+3. **Download the dataset:**
+   - Download the CUB-200-2011 dataset from the [official source](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html)
+   - Extract the dataset to the `data/` directory
+
+### Running the Project
+
+**Option 1: Using the Main Notebook**
+```bash
+jupyter notebook src/main.ipynb
+```
+
+**Option 2: Running the Python Script**
+```bash
+python src/main.py
+```
+
+## Project Structure
+
+```
+bird-species-classification/
+├── data/
+│   ├── CUB_200_2011/
+│   └── processed/
+├── src/
+│   ├── main.py
+│   ├── main.ipynb
+│   ├── models/
+│   ├── preprocessing/
+│   └── utils/
+├── notebooks/
+├── results/
+├── requirements.txt
+└── README.md
+```
+
+## Model Architecture
+
+Our multi-modal approach consists of:
+
+1. **Image Processing Pipeline:**
+   - Convolutional Neural Network for feature extraction
+   - Data augmentation and preprocessing
+
+2. **Text Processing Pipeline:**
+   - NLP preprocessing of species descriptions
+   - Text vectorization and embedding
+
+3. **Fusion Network:**
+   - Combines image and text features
+   - Final classification layer for 200 species
 
